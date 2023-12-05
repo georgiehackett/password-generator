@@ -114,7 +114,7 @@ function getPasswordOptions() {
       "Would you like your password to contain special characters?"
     );
   }
-  while (!containsLowercase && !containsUppercase && !containsNumeric !containsSpecial) {
+  while (!containsLowercase && !containsUppercase && !containsNumeric && !containsSpecial) {
     alert("Please try again! Select at least one option.")
   }
 
@@ -129,8 +129,13 @@ function getPasswordOptions() {
   return userInput;
 }
 
+getPasswordOptions();
+
 // Function for getting a random element from an array
-function getRandom(arr) {}
+function getRandom(arr) {
+  var randomElement = Math.floor(Math.random() * arr.length);
+  return arr[randomElement];
+}
 
 // Function to generate password with user input
 function generatePassword() {}
