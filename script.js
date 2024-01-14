@@ -103,6 +103,9 @@ buttonEl.addEventListener("click", function getPasswordOptions() {
     alert(
       "Please try again! Make sure your password contains between 8-128 characters."
     );
+  } else {
+    var containsLowercase = prompt('Would you like your password to contain lowercase characters?')
+    console.log(containsLowercase);
   }
 });
 
