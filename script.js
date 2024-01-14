@@ -88,16 +88,23 @@ var upperCasedCharacters = [
   "Z",
 ];
 
-var textAreaEl = document.getElementById('password');
-var buttonEl = document.getElementById('generate');
+var textAreaEl = document.getElementById("password");
+var buttonEl = document.getElementById("generate");
 
-buttonEl.addEventListener('click', function getPasswordOptions() {
+buttonEl.addEventListener("click", function getPasswordOptions() {
   // console.log('hello');
-  var passwordLength = prompt('How many characters would you like your password to contain? Choose between 8-128');
+  var passwordLength = prompt(
+    "How many characters would you like your password to contain? Choose between 8-128"
+  );
   var passwordLength = parseInt(passwordLength);
-  console.log(passwordLength);
-  console.log(typeof(passwordLength));
-})
+  // console.log(passwordLength);
+  // console.log(typeof(passwordLength));
+  if (isNaN(passwordLength) || 8 > passwordLength || 128 < passwordLength) {
+    alert(
+      "Please try again! Make sure your password contains between 8-128 characters."
+    );
+  }
+});
 
 // Function to prompt user for password options
 // function getPasswordOptions() {
