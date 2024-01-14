@@ -88,6 +88,8 @@ var upperCasedCharacters = [
   "Z",
 ];
 
+var textAreaEl = document.getElementById('password');
+var buttonEl = document.getElementById('generate');
 // Function to prompt user for password options
 function getPasswordOptions() {
   var passwordLength = parseInt(
