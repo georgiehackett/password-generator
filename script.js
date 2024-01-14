@@ -88,6 +88,15 @@ var upperCasedCharacters = [
   "Z",
 ];
 
+function checkInput(input) {
+  var input = input.toLowerCase();
+  if (input === 'yes' || input === 'no') {
+    return;
+  } else {
+    alert('You must answer yes or no');
+  }
+}
+
 var textAreaEl = document.getElementById("password");
 var buttonEl = document.getElementById("generate");
 
@@ -106,6 +115,7 @@ buttonEl.addEventListener("click", function getPasswordOptions() {
   } else {
     var containsLowercase = prompt('Would you like your password to contain lowercase characters?')
     console.log(containsLowercase);
+    checkInput(containsLowercase);
   }
 });
 
