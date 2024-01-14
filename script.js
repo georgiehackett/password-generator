@@ -90,68 +90,73 @@ var upperCasedCharacters = [
 
 var textAreaEl = document.getElementById('password');
 var buttonEl = document.getElementById('generate');
+
+buttonEl.addEventListener('click', function getPasswordOptions() {
+  console.log('hello');
+})
+
 // Function to prompt user for password options
-function getPasswordOptions() {
-  var passwordLength = parseInt(
-    prompt(
-      "How many characters would you like your password to contain? Choose between 8-128"
-    )
-  );
+// function getPasswordOptions() {
+//   var passwordLength = parseInt(
+//     prompt(
+//       "How many characters would you like your password to contain? Choose between 8-128"
+//     )
+//   );
 
-  if (isNaN(passwordLength) || 8 > passwordLength || 128 < passwordLength) {
-    alert(
-      "Please try again! Make sure your password contains between 8-128 characters."
-    );
-  } else {
-    var containsLowercase = confirm(
-      "Would you like your password to contain lowercase characters?"
-    );
-    var containsUppercase = confirm(
-      "Would you like your password to contain uppercase characters?"
-    );
-    var containsNumeric = confirm(
-      "Would you like your password to contain numeric characters?"
-    );
-    var containsSpecial = confirm(
-      "Would you like your password to contain special characters?"
-    );
-  }
-  while (!containsLowercase && !containsUppercase && !containsNumeric && !containsSpecial) {
-    alert("Please try again! Select at least one option.")
-  }
+//   if (isNaN(passwordLength) || 8 > passwordLength || 128 < passwordLength) {
+//     alert(
+//       "Please try again! Make sure your password contains between 8-128 characters."
+//     );
+//   } else {
+//     var containsLowercase = confirm(
+//       "Would you like your password to contain lowercase characters?"
+//     );
+//     var containsUppercase = confirm(
+//       "Would you like your password to contain uppercase characters?"
+//     );
+//     var containsNumeric = confirm(
+//       "Would you like your password to contain numeric characters?"
+//     );
+//     var containsSpecial = confirm(
+//       "Would you like your password to contain special characters?"
+//     );
+//   }
+//   while (!containsLowercase && !containsUppercase && !containsNumeric && !containsSpecial) {
+//     alert("Please try again! Select at least one option.")
+//   }
 
-  var userInput = {
-    passwordLength: passwordLength,
-    containsLowercase: containsLowercase,
-    containsUppercase: containsUppercase,
-    containsNumeric: containsNumeric,
-    containsSpecial: containsSpecial,
-  };
+//   var userInput = {
+//     passwordLength: passwordLength,
+//     containsLowercase: containsLowercase,
+//     containsUppercase: containsUppercase,
+//     containsNumeric: containsNumeric,
+//     containsSpecial: containsSpecial,
+//   };
 
-  return userInput;
-}
+//   return userInput;
+// }
 
-getPasswordOptions();
+// getPasswordOptions();
 
-// Function for getting a random element from an array
-function getRandom(arr) {
-  var randomElement = Math.floor(Math.random() * arr.length);
-  return arr[randomElement];
-}
+// // Function for getting a random element from an array
+// function getRandom(arr) {
+//   var randomElement = Math.floor(Math.random() * arr.length);
+//   return arr[randomElement];
+// }
 
-// Function to generate password with user input
-function generatePassword() {}
+// // Function to generate password with user input
+// function generatePassword() {}
 
-// Get references to the #generate element
-var generateBtn = document.querySelector("#generate");
+// // Get references to the #generate element
+// var generateBtn = document.querySelector("#generate");
 
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+// // Write password to the #password input
+// function writePassword() {
+//   var password = generatePassword();
+//   var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
-}
+//   passwordText.value = password;
+// }
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+// // Add event listener to generate button
+// generateBtn.addEventListener("click", writePassword);
