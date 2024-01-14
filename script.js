@@ -92,7 +92,11 @@ var textAreaEl = document.getElementById('password');
 var buttonEl = document.getElementById('generate');
 
 buttonEl.addEventListener('click', function getPasswordOptions() {
-  console.log('hello');
+  // console.log('hello');
+  var passwordLength = prompt('How many characters would you like your password to contain? Choose between 8-128');
+  var passwordLength = parseInt(passwordLength);
+  console.log(passwordLength);
+  console.log(typeof(passwordLength));
 })
 
 // Function to prompt user for password options
