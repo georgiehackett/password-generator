@@ -145,6 +145,24 @@ buttonEl.addEventListener("click", function getPasswordOptions() {
               // console.log(containsUppercase);
               // console.log(containsNumeric);
               // console.log(containsSpecial);
+              var charTypes = [];
+              console.log(charTypes);
+              if (containsLowercase === 'yes') {
+                charTypes = charTypes.concat(lowerCasedCharacters);
+                console.log(charTypes);
+              }
+              if (containsUppercase === 'yes') {
+                charTypes = charTypes.concat(upperCasedCharacters);
+                console.log(charTypes);
+              }
+              if (containsNumeric === 'yes') {
+                charTypes = charTypes.concat(numericCharacters);
+                console.log(charTypes);
+              }
+              if (containsSpecial === 'yes') {
+                charTypes = charTypes.concat(specialCharacters);
+                console.log(charTypes);
+              }
             }
           };
         }
