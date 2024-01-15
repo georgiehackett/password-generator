@@ -170,6 +170,9 @@ buttonEl.addEventListener("click", function getPasswordOptions() {
                 userPassword += getRandom(charTypes);
                 console.log(userPassword);
               }
+
+              textAreaEl.textContent = userPassword;
+              
             }
           };
         }
