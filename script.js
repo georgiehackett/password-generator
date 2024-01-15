@@ -98,8 +98,6 @@ function checkInput(input) {
   }
 }
 
-// function checkMinOptions()
-
 var textAreaEl = document.getElementById("password");
 var buttonEl = document.getElementById("generate");
 
@@ -143,16 +141,25 @@ buttonEl.addEventListener("click", function getPasswordOptions() {
             alert('You must select at least one option. Please try again.');
             return;
             } else {
-              console.log(containsLowercase);
-              console.log(containsUppercase);
-              console.log(containsNumeric);
-              console.log(containsSpecial);
+              // console.log(containsLowercase);
+              // console.log(containsUppercase);
+              // console.log(containsNumeric);
+              // console.log(containsSpecial);
             }
           };
         }
       }
     }
   });
+
+function getRandom(arr) {
+  var getRandomEl = Math.floor(Math.random() * arr.length);
+  var randomEl = arr[getRandomEl];
+  console.log(randomEl);
+  return randomEl;
+}
+
+
 
 // console.log(passwordOptions);
 
