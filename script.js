@@ -141,27 +141,34 @@ buttonEl.addEventListener("click", function getPasswordOptions() {
             alert('You must select at least one option. Please try again.');
             return;
             } else {
-              // console.log(containsLowercase);
-              // console.log(containsUppercase);
-              // console.log(containsNumeric);
-              // console.log(containsSpecial);
+
               var charTypes = [];
-              console.log(charTypes);
+              // console.log(charTypes);
               if (containsLowercase === 'yes') {
                 charTypes = charTypes.concat(lowerCasedCharacters);
-                console.log(charTypes);
+                // console.log(charTypes);
               }
               if (containsUppercase === 'yes') {
                 charTypes = charTypes.concat(upperCasedCharacters);
-                console.log(charTypes);
+                // console.log(charTypes);
               }
               if (containsNumeric === 'yes') {
                 charTypes = charTypes.concat(numericCharacters);
-                console.log(charTypes);
+                // console.log(charTypes);
               }
               if (containsSpecial === 'yes') {
                 charTypes = charTypes.concat(specialCharacters);
-                console.log(charTypes);
+                // console.log(charTypes);
+              }
+              
+              console.log(charTypes);
+              console.log(passwordLength);
+
+              var userPassword = '';
+
+              for (i = 0; i < passwordLength; i++) {
+                userPassword += getRandom(charTypes);
+                console.log(userPassword);
               }
             }
           };
