@@ -98,6 +98,8 @@ function checkInput(input) {
   }
 }
 
+// function checkMinOptions()
+
 var textAreaEl = document.getElementById("password");
 var buttonEl = document.getElementById("generate");
 
@@ -123,7 +125,6 @@ buttonEl.addEventListener("click", function getPasswordOptions() {
       var containsUppercase = prompt(
         "Would you like your password to contain uppercase characters?"
       );
-      console.log(containsUppercase);
       if (checkInput(containsUppercase) === false) {
         return;
       } else {
@@ -137,15 +138,23 @@ buttonEl.addEventListener("click", function getPasswordOptions() {
             "Would you like your password to contain special characters?"
           );
           if (checkInput(containsSpecial) === false) {
-            return
+            return;
+          } else if (containsLowercase === 'no' && containsUppercase === 'no' && containsNumeric === 'no' && containsSpecial === 'no') {
+            alert('You must select at least one option. Please try again.');
+            return;
+            } else {
+              console.log(containsLowercase);
+              console.log(containsUppercase);
+              console.log(containsNumeric);
+              console.log(containsSpecial);
+            }
           };
         }
       }
     }
-  }
-});
+  });
 
-// console.log(containsLowercase);
+// console.log(passwordOptions);
 
 // Function to prompt user for password options
 // function getPasswordOptions() {
